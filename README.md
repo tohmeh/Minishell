@@ -1,14 +1,11 @@
 # minishell
 A simple Unix-like shell implemented in C. It supports basic commands, piping, redirection, and environment variable management, focusing on process handling and system calls.
 
----
-
 ## Overview  
 A minimalist UNIX shell implementation supporting basic command execution, environment management, built-ins, and signal handling. Developed as part of the 42 School curriculum in collaboration with **Gaby Khoury**.  
 
----
-
 ## Features  
+
 ### Core Functionality  
 - Command execution with **PATH resolution** (e.g., `ls`, `grep`, `cat`).  
 - **Built-in commands**:  
@@ -20,7 +17,6 @@ A minimalist UNIX shell implementation supporting basic command execution, envir
 - **Signal handling** for `Ctrl-C` (SIGINT) and `Ctrl-\` (SIGQUIT).  
 - **Error handling** for syntax errors and invalid commands.  
 
----
 
 ## Team Contributions  
 ### **Your Name**  
@@ -55,13 +51,13 @@ cd minishell && make
 ```bash
 ./minishell
 ```
-## usage example 
+### usage example 
 
 ```bash
 echo "Hello $USER"
 ```
 
-## Limitations 
+### Limitations 
 
 - No wild cart expansion (*.c)
 - limited signal handling in heredoc
