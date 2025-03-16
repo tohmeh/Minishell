@@ -34,7 +34,6 @@ A minimalist UNIX shell implementation supporting basic command execution, envir
   - **Process creation** 
   - **Redirections** and **pipe** management.  
 
----
 
 ## Getting Started  
 ### Installation  
