@@ -31,9 +31,8 @@ A minimalist UNIX shell implementation supporting basic command execution, envir
 ### **Gaby Khoury**  
 - **Parsing**: Structured tokens into executable command pipelines.  
 - **Execution**:  
-  - **Process creation** with `fork()` and `execve()`.  
+  - **Process creation** 
   - **Redirections** and **pipe** management.  
-  - PATH resolution using the `env` list.  
 
 ---
 
