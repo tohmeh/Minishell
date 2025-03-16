@@ -63,6 +63,6 @@ echo "Hello $USER"
 - Limited signal handling in heredoc
 - No advanced job control (background processes)
 
-### extra
+### Extra
 
--I created a flowchart diagram to demonstrate some of the functionality I’ve implemented. You can check it out on Draw.io by opening an existing project.
+- I created a flowchart diagram to demonstrate some of the functionality I’ve implemented. You can check it out on Draw.io by opening an existing project.
