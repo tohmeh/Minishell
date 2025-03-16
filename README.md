@@ -19,7 +19,7 @@ A minimalist UNIX shell implementation supporting basic command execution, envir
 
 
 ## Team Contributions  
-### **Your Name**  
+### **Mohammad Tohmeh**  
 - **Tokenization**: Split input into tokens while handling quotes, spaces, and escape characters.  
 - **Environment Management**:  
   - `env` list initialization and updates.  
