@@ -25,7 +25,7 @@ A minimalist UNIX shell implementation supporting basic command execution, envir
   - `env` list initialization and updates.  
   - `export` and `unset` logic.  
 - **Built-ins**: Implemented `cd`, `echo`, `exit`, and environment-related commands.  
-- **Signals**: Configured `SIGINT` to restart the prompt and `SIGQUIT` to exit.  
+- **Signals**: Configured `SIGINT` , `SIGQUIT` ...
 - **Project Structure**: Organized code into modular files for readability and collaboration.  
 
 ### **Gaby Khoury**  
@@ -60,6 +60,9 @@ echo "Hello $USER"
 ### Limitations 
 
 - No wild cart expansion (*.c)
-- limited signal handling in heredoc
+- Limited signal handling in heredoc
 - No advanced job control (background processes)
 
+### extra
+
+-I created a flowchart diagram to demonstrate some of the functionality I’ve implemented. You can check it out on Draw.io by opening an existing project.
