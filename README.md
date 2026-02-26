@@ -1,67 +1,37 @@
-# minishell  
-A simple Unix-like shell implemented in C. It supports basic commands, piping, redirection, and environment variable management, with a focus on process handling and system calls.
+# minishell
 
-## Overview  
-A minimalist UNIX shell implementation that supports basic command execution, environment management, built-in commands, and signal handling. Developed as part of the 42 School curriculum in collaboration with **Gaby Khoury**.  
+A Unix shell built from scratch in C, supporting pipelines, redirections, and
+environment management.
 
-## Features  
+## Features
 
-### Core Functionality  
-- **Command execution** with **PATH resolution** (e.g., `ls`, `grep`, `cat`).  
-- **Built-in commands**:  
-  - `cd` | `echo` | `pwd` | `exit`  
-  - `env` | `export` | `unset`  
-- **Environment variable management** (set, unset, update).  
-- **Redirections**: `>`, `<`, `>>`, `<<` (heredoc).  
-- **Pipes**: `|` for command chaining.  
-- **Signal handling** for `Ctrl-C` (SIGINT) and `Ctrl-\` (SIGQUIT).  
-- **Error handling** for syntax errors and invalid commands.  
+- Runs external commands by resolving them through PATH
+- Pipes output between commands with `|`
+- Handles input/output redirections including `>`, `<`, `>>`, and heredoc `<<`
+- Expands environment variables and manages them with `export` and `unset`
+- Built-in commands: `cd`, `echo`, `pwd`, `env`, `export`, `unset`, `exit`
+- Handles `Ctrl-C` and `Ctrl-\` signals the way a real shell would
 
-## Team Contributions  
+## Getting Started
 
-### **Mohammad Tohmeh**  
-- **Tokenization**: Splitting input into tokens while handling quotes, spaces, and escape characters.  
-- **Environment Management**:  
-  - `env` list initialization and updates.  
-  - `export` and `unset` logic.  
-- **Built-ins**: Implemented `cd`, `echo`, `exit`, and environment-related commands.  
-- **Signals**: Configured `SIGINT`, `SIGQUIT`, etc.  
-- **Project Structure**: Organized code into modular files for readability and collaboration.  
-
-### **Gaby Khoury**  
-- **Parsing**: Structured tokens into executable command pipelines.  
-- **Execution**:  
-  - **Process creation**  
-  - **Redirection** and **pipe management**  
-
-## Getting Started  
-
-### Installation  
-1. Clone the repository:  
-```bash  
+```bash
 git clone https://github.com/tohmeh/minishell.git
-```
-2. Compile:  
-```bash
 cd minishell && make
-```
-3. Run:  
-```bash
 ./minishell
 ```
 
-### Usage Example  
-```bash
-echo "Hello $USER"
+## Project Structure
+
+```
+src/
+  main/          entry point and shell loop
+  tokenization/  splits raw input into tokens, handling quotes and spaces
+  parsing/       builds token sequences into executable command structures
+  execution/     forks processes, sets up pipes, and manages redirections
+  build_in/      implementations of all built-in commands
+  utils/         shared helpers
+LIBFT/           custom C utility library used throughout the project
+includes/        shared header files
 ```
 
-### Limitations  
-- No wildcard expansion (`*.c`).  
-- Limited signal handling in heredoc.  
-- No advanced job control (background processes).  
-
-### Extra  
-We created the following flowchart diagram to demonstrate some of the functionalities we’ve implemented. You can check it below.  
-
-![alt text](minishell.drawio.png)
----
+![Minishell flow diagram](minishell.drawio.png)
